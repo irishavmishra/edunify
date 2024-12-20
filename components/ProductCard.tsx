@@ -1,7 +1,21 @@
-const ProductCard = ({ image, schoolName, address, city }: any) => {
+import Image from "next/image";
+
+interface ProductCardProps {
+  image: string;
+  schoolName: string;
+  address: string;
+  city: string;
+}
+
+const ProductCard = ({
+  image,
+  schoolName,
+  address,
+  city,
+}: ProductCardProps) => {
   return (
     <div className="w-[300px] h-[360px] m-4 rounded-lg shadow-lg border border-gray-700 bg-gray-800 text-white">
-      <img
+      <Image
         className="w-full h-48 object-cover rounded-t-lg"
         src={image}
         alt={schoolName}

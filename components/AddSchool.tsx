@@ -29,9 +29,9 @@ const AddSchool = () => {
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000));
       console.log(data);
-    } catch (error) {
+    } catch {
       setError("root", {
-        message: "this school is already registered",
+        message: "This school is already registered",
       });
     }
   };
